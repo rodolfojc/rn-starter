@@ -8,12 +8,12 @@ const navigator = createStackNavigator(
   {
     Home: HomeScreen,
     Components: ComponentsScreen,
-    List: ListScreen
+    List: ListScreen,
   },
   {
     initialRouteName: "List",
     defaultNavigationOptions: {
-      title: "App"
+    title: "App"
     }
   }
 );
