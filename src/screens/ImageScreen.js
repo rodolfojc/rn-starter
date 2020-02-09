@@ -4,11 +4,11 @@ import ImageDetail from '../Components/ImageDetail';
 
 const ImageScreen = () => {
     return (
-    <View>
-        <ImageDetail title="Beach"/>
-        <ImageDetail title="Forest"/>
-        <ImageDetail title="Mountain"/>        
-    </View>
+        <View>
+            <ImageDetail title="Beach" image={require('../../assets/beach.jpg')}/>
+            <ImageDetail title="Forest" image={require('../../assets/forest.jpg')}/>
+            <ImageDetail title="Mountain" image={require('../../assets/mountain.jpg')}/>        
+        </View>
     );
 };
 
