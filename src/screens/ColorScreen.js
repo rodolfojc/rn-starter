@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, Button } from 'react-native';
+import { View, StyleSheet, Button, FlatList } from 'react-native';
 
 const ColorScreen = (props) => {
 
@@ -7,10 +7,19 @@ const ColorScreen = (props) => {
 
     return (
         <View>
-            <Button title="Add a Color" onPress={() => {
+            <Button title="Add a Color" 
+            onPress={() => {
                 setColors([...colors, randomRgb()]);
-            }}/>
-            <View style={{ height: 100, width: 100, backgroundColor: randomRgb()}}></View>
+            }}
+            />            
+            <FlatList
+            horizontal
+            keyExtractor={(item) => item} 
+            data={colors}
+            renderItem={({ item }) => {
+                return <View style={{ height: 100, width: 100, backgroundColor: item }}></View>
+            }}
+            />
         </View>
     );
 };
