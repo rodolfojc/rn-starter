@@ -5,9 +5,18 @@ import ImageDetail from '../Components/ImageDetail';
 const ImageScreen = () => {
     return (
         <View>
-            <ImageDetail title="Beach" image={require('../../assets/beach.jpg')}/>
-            <ImageDetail title="Forest" image={require('../../assets/forest.jpg')}/>
-            <ImageDetail title="Mountain" image={require('../../assets/mountain.jpg')}/>        
+            <ImageDetail 
+                title="Beach" 
+                image={require('../../assets/beach.jpg')}
+                score="Image Score - 9"/>
+            <ImageDetail 
+                title="Forest" 
+                image={require('../../assets/forest.jpg')}
+                score="Image Score - 7"/>
+            <ImageDetail 
+                title="Mountain" 
+                image={require('../../assets/mountain.jpg')}
+                score="Image Score - 4"/>        
         </View>
     );
 };
