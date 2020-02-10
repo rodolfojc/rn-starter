@@ -6,23 +6,20 @@ const COLOR_INCREMENT = 15;
 
 const reducer = (state, action) => {
     // State === {red: number, green: number, blue: number}
-    // action === {colorTochange: 'red' || 'green' || 'blue', amount: 15 || -15}
+    // action === {type: 'change_red' || 'change_green' || 'change_blue', payload: 15 || -15}
     switch (action.coloToChange) {
         case 'red':
             return state.red + action.amount > 255 || state.red + action.amount < 0 
             ? state
-            :
-            {...state, red: state.red + action.amount};
+            : {...state, red: state.red + action.amount};
         case 'green':
             return state.green + action.amount > 255 || state.green + action.amount < 0
             ? state
-            :            
-            {...state, green: state.green + action.amount};
+            : {...state, green: state.green + action.amount};
         case 'blue':
             return state.blue + action.amount > 255 || state.blue + action.amount < 0
             ? state
-            :
-            {...state, blue: state.blue + action.amount};
+            : {...state, blue: state.blue + action.amount};
         default:
             return state;
     }
