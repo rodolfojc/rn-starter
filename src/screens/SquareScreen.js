@@ -20,28 +20,33 @@ const reducer = (state, action) => {
     }
 };
 
-const SquareScreen = (props) => {   
+const SquareScreen = () => {   
 
     const [state, dispath] = useReducer(reducer, {red: 0, green: 0, blue: 0});
+    const {red, green, blue} = state;
 
     return (
         <View>
             <ColorCounter 
-            onIncrease={() => {} } 
-            onDecrease={() => {} } 
+            onIncrease={() => dispath({ coloToChange: 'red', amount: COLOR_INCREMENT})} 
+            onDecrease={() => dispath({ coloToChange: 'red', amount: -1 * COLOR_INCREMENT})} 
             color="RED"
             />
             <ColorCounter
-            onIncrease={() => {} }
-            onDecrease={() => {} }  
+            onIncrease={() => dispath({ coloToChange: 'blue', amount: COLOR_INCREMENT})}
+            onDecrease={() => dispath({ coloToChange: 'blue', amount: -1 * COLOR_INCREMENT})}  
             color="BLUE"
             />
             <ColorCounter
-            onIncrease={() => {} }
-            onDecrease={() => {} }   
+            onIncrease={() => dispath({ coloToChange: 'green', amount: COLOR_INCREMENT})}
+            onDecrease={() => dispath({ coloToChange: 'green', amount: -1 * COLOR_INCREMENT})}   
             color="GREEN"
             />
-            <View style={{ height: 150, width: 150, backgroundColor: `rgb(${red},${green},${blue})`}}/>
+            <View style={{ 
+                height: 150, 
+                width: 150, 
+                backgroundColor: 
+                `rgb(${red},${green},${blue})`}}/>
         </View>
     );
 };
