@@ -27,8 +27,9 @@ const styles = StyleSheet.create({
     textTwoStyle: {
         borderWidth: 3,
         borderColor: 'red',
-        position: 'absolute',
-        fontSize: 18
+        top: 10
+        //position: 'absolute',
+        //fontSize: 18
         //alignSelf: 'center',
         //flex: 4            
     },
