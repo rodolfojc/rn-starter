@@ -27,8 +27,12 @@ const styles = StyleSheet.create({
     textTwoStyle: {
         borderWidth: 3,
         borderColor: 'red',
-        top: 10
-        //position: 'absolute',
+        top: 10,
+        bottom: 0,
+        left: 0,
+        right:0,
+        position: 'absolute',
+        // ... StyleSheet.absoluteFillObject
         //fontSize: 18
         //alignSelf: 'center',
         //flex: 4            
